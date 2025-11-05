@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Property Management - Where Transparency Meets Luxury</title>
+    <meta name="description" content="Redefining luxury property management with unparalleled service and complete, real-time transparency for discerning property owners.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-parchment': '#F3F0EC',
+                        'soft-charcoal': '#2A2A2A',
+                        'antique-gold': '#BA9C7B',
+                        'warm-black': '#514F4F',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Base Typography */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #514F4F;
+            background-color: #F3F0EC;
+        }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* CTA Button Styles */
+        .cta-button {
+            background-color: #BA9C7B;
+            color: #F3F0EC;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #A88B6A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(186, 156, 123, 0.3);
+        }
+        
+        /* Dark Section Styling */
+        .dark-section {
+            background-color: #2A2A2A;
+            color: #F3F0EC;
+        }
+        
+        /* Icon Styling */
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background-color: #BA9C7B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Testimonial Monogram */
+        .monogram {
+            width: 80px;
+            height: 80px;
+            background-color: #BA9C7B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #F3F0EC;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Step Number Styling */
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: #BA9C7B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #F3F0EC;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Star Rating */
+        .star-rating {
+            color: #BA9C7B;
+            font-size: 1.5rem;
+            letter-spacing: 0.25rem;
+        }
+        
+        /* Checkmark Icon */
+        .check-icon {
+            color: #BA9C7B;
+            font-size: 1.5rem;
+        }
+        
+        /* Generous Line Height for Luxury Feel */
+        p {
+            line-height: 1.8;
+        }
+        
+        /* Section Spacing */
+        section {
+            padding: 5rem 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            section {
+                padding: 7rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECTION 1: Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative" style="background: linear-gradient(rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), url('https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2074&auto=format&fit=crop') center/cover no-repeat;">
+        <div class="container mx-auto max-w-6xl text-center text-warm-parchment px-6">
+            <!-- Eyebrow Copy -->
+            <p class="text-sm md:text-base uppercase tracking-widest font-montserrat font-semibold mb-4">
+                For Discerning Property Owners & Investors
+            </p>
+            
+            <!-- Main Headline - Emotional Promise -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair mb-6 leading-tight">
+                Where Transparency<br>Meets Luxury
+            </h1>
+            
+            <!-- Sub-Headline - How You Deliver -->
+            <p class="text-lg md:text-xl font-montserrat mb-8 max-w-3xl mx-auto">
+                Redefining luxury property management with unparalleled service<br class="hidden md:block"> and complete, real-time transparency.
+            </p>
+            
+            <!-- Primary CTA -->
+            <a href="#contact" class="cta-button inline-block px-10 py-4 rounded-sm text-base md:text-lg mb-8">
+                Book Your Free Consultation
+            </a>
+            
+            <!-- Social Proof -->
+            <div class="mt-8">
+                <div class="star-rating mb-2">★★★★★</div>
+                <p class="text-sm md:text-base font-montserrat italic">
+                    "Trusted by discerning owners of world-class properties."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Three Quick Outcomes -->
+    <section class="py-16 md:py-20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center">
+                <!-- Outcome 1 -->
+                <div>
+                    <div class="icon-circle">
+                        <svg class="w-8 h-8 text-warm-parchment" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-2">Transparent Operations</h3>
+                    <p class="text-base text-warm-black">Complete visibility into every aspect of your property management.</p>
+                </div>
+                
+                <!-- Outcome 2 -->
+                <div>
+                    <div class="icon-circle">
+                        <svg class="w-8 h-8 text-warm-parchment" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-2">Premium Property Care</h3>
+                    <p class="text-base text-warm-black">Proactive maintenance that protects and enhances your asset's value.</p>
+                </div>
+                
+                <!-- Outcome 3 -->
+                <div>
+                    <div class="icon-circle">
+                        <svg class="w-8 h-8 text-warm-parchment" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-2">Elevated Guest Experience</h3>
+                    <p class="text-base text-warm-black">Five-star service that delights your guests and protects your reputation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Problem Identification -->
+    <section class="dark-section">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-playfair mb-8">The Burden of Luxury Ownership</h2>
+            
+            <div class="text-lg md:text-xl leading-relaxed space-y-6">
+                <p>
+                    Luxury property ownership should be a reward, not a burden. Yet, many owners find themselves trapped, 
+                    spending their valuable time "managing their manager" instead of enjoying their investment.
+                </p>
+                
+                <p>
+                    You're left dealing with opaque reports, reactive (and costly) "emergency" maintenance, and the constant, 
+                    underlying stress that your asset isn't receiving the meticulous, proactive care it deserves.
+                </p>
+                
+                <p class="font-semibold text-antique-gold">
+                    This isn't luxury; it's a second job.
+                </p>
+                
+                <div class="mt-8 pt-8 border-t border-antique-gold">
+                    <p class="text-base md:text-lg italic">
+                        <strong>Surface Problem:</strong> Constant calls, unexpected issues, unhappy guests, vague financial reports.
+                    </p>
+                    <p class="text-base md:text-lg italic mt-4">
+                        <strong>Root Cause:</strong> A fundamental lack of trust, transparency, and true, white-glove service.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Solution Presentation -->
+    <section>
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-playfair mb-6">The Lumina Standard:<br>Management Reimagined</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
+                <p>
+                    We founded Lumina with a simple belief: integrity and sophistication can, and must, coexist in property management.
+                </p>
+                
+                <p>
+                    We are not a "management" company; we are a "peace of mind" service. Our solution combines a dedicated, 
+                    white-glove team with a proprietary technology platform. This gives you a single point of contact for everything, 
+                    and a single, transparent dashboard to see everything—from proactive maintenance schedules to guest communications.
+                </p>
+                
+                <p class="text-xl font-semibold text-antique-gold">
+                    We handle the complexity so you can experience the effortless ownership you've always wanted.
+                </p>
+            </div>
+            
+            <!-- Solution Image -->
+            <div class="mt-12 rounded-sm overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop" 
+                     alt="Luxury property interior" 
+                     class="w-full h-96 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Social Proof & Testimonials -->
+    <section class="dark-section">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-playfair text-center mb-16">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Testimonial 1 -->
+                <div class="text-center">
+                    <div class="monogram">SC</div>
+                    <div class="star-rating mb-4">★★★★★</div>
+                    <p class="text-lg italic mb-6 leading-relaxed">
+                        "The transparency from Lumina is unlike anything I've experienced. I can see every maintenance request, 
+                        every guest check-in, all in real-time. The trust is absolute."
+                    </p>
+                    <p class="font-semibold text-antique-gold">S. Chen</p>
+                    <p class="text-sm">Investor, Multi-Property Portfolio</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="text-center">
+                    <div class="monogram">MD</div>
+                    <div class="star-rating mb-4">★★★★★</div>
+                    <p class="text-lg italic mb-6 leading-relaxed">
+                        "Lumina's team anticipates needs I haven't even thought of. The level of care for my property, 
+                        and for my guests, is simply unparalleled."
+                    </p>
+                    <p class="font-semibold text-antique-gold">M. DuPont</p>
+                    <p class="text-sm">Family Estate Owner</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="text-center">
+                    <div class="monogram">JA</div>
+                    <div class="star-rating mb-4">★★★★★</div>
+                    <p class="text-lg italic mb-6 leading-relaxed">
+                        "Lumina isn't a cost; it's an investment. My property's value has been enhanced, and my personal time reclaimed. 
+                        The peace of mind is priceless."
+                    </p>
+                    <p class="font-semibold text-antique-gold">J. Alistair</p>
+                    <p class="text-sm">International Homeowner</p>
+                </div>
+            </div>
+            
+            <!-- Review Platform Credibility -->
+            <div class="text-center mt-16 pt-12 border-t border-antique-gold">
+                <p class="text-sm uppercase tracking-widest mb-4">As Featured In</p>
+                <p class="text-lg font-semibold">Luxury Portfolio International & Forbes Global Properties</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Simple Three-Step Process -->
+    <section>
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-playfair text-center mb-16">Your Journey to Effortless Ownership</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="step-number">1</div>
+                    <h3 class="text-2xl font-playfair mb-4">Book Your Free Consultation</h3>
+                    <p class="text-lg leading-relaxed">
+                        We discuss your property, your goals, and how Lumina can provide a truly tailored service.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="step-number">2</div>
+                    <h3 class="text-2xl font-playfair mb-4">We Create Your Custom Property Plan</h3>
+                    <p class="text-lg leading-relaxed">
+                        Our team conducts a full property audit and presents a proactive plan for management, maintenance, and transparency.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="step-number">3</div>
+                    <h3 class="text-2xl font-playfair mb-4">Experience True Peace of Mind</h3>
+                    <p class="text-lg leading-relaxed">
+                        We handle every detail, providing you with real-time updates and effortless ownership.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Visual Timeline for Desktop -->
+            <div class="hidden md:block mt-8 relative">
+                <div class="absolute top-1/2 left-0 right-0 h-1 bg-antique-gold transform -translate-y-1/2" style="width: calc(100% - 160px); margin: 0 auto;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: The Flex Section (Unique Advantages) -->
+    <section class="dark-section">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-playfair text-center mb-16">The Lumina Difference</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Dedicated Home Manager</h4>
+                        <p>A single, expert point of contact for you.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Radical Transparency</h4>
+                        <p>Real-time access to financials, maintenance, and reports.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Proactive Maintenance</h4>
+                        <p>We protect your asset by solving problems before they happen.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">White-Glove Guest Curation</h4>
+                        <p>We manage the full, 5-star guest experience.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Meticulously Vetted Staff</h4>
+                        <p>Only trusted, insured, and highly-trained professionals will enter your home.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">No Hidden Fees</h4>
+                        <p>Our pricing is transparent, just like our service.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Proprietary Technology</h4>
+                        <p>A seamless, powerful platform in your pocket.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">24/7 Concierge Service</h4>
+                        <p>We are always available for you and your guests.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Asset Value Enhancement</h4>
+                        <p>Our goal is to make your property more valuable, not just maintain it.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start space-x-4">
+                    <span class="check-icon flex-shrink-0">✓</span>
+                    <div>
+                        <h4 class="font-semibold mb-2">Absolute Discretion</h4>
+                        <p>We operate with the complete confidentiality that luxury properties demand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: Features Section (Logical Justification) -->
+    <section>
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-playfair text-center mb-16">A Meticulous Approach to Management</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Full-Service Property Management</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>24/7 Concierge & Guest Services</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Luxury Tenant/Guest Screening</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Proactive & Preventative Maintenance</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Detailed Bill Payment & Financial Reporting</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Amenity Management</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Interior Design & Staging Consultation</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Vendor & Contractor Management</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Smart Home & Security Audits</span>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-antique-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Complete Discretion & Confidentiality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FAQ (Objection Handling) -->
+    <section class="dark-section">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-playfair text-center mb-16">Frequently Asked Questions</h2>
+            
+            <div class="space-y-8">
+                <!-- FAQ 1 -->
+                <div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-3 text-antique-gold">What types of properties do you manage?</h3>
+                    <p class="text-lg leading-relaxed">
+                        We specialize in high-end residential estates, luxury second homes, and boutique multi-unit portfolios. 
+                        We do not manage large-scale commercial or standard rental properties.
+                    </p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-3 text-antique-gold">How is Lumina different from a standard property manager?</h3>
+                    <p class="text-lg leading-relaxed">
+                        We are a white-glove service firm, not a management commodity. Our focus is on asset preservation and 
+                        elevated experiences, not just rent collection. We provide proactive, comprehensive care with 100% transparency.
+                    </p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-3 text-antique-gold">What is your pricing structure?</h3>
+                    <p class="text-lg leading-relaxed">
+                        Our fees are tailored to the unique needs of your property and the level of service required. We provide 
+                        a custom, all-inclusive proposal after your free consultation. Our pricing is transparent, with no hidden 
+                        fees or markups.
+                    </p>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-3 text-antique-gold">Where do you operate?</h3>
+                    <p class="text-lg leading-relaxed">
+                        We currently serve exclusive properties in select luxury markets. Contact us to discuss your property's location 
+                        and how we can serve you.
+                    </p>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div>
+                    <h3 class="text-xl font-montserrat font-semibold mb-3 text-antique-gold">What is your "transparent" platform?</h3>
+                    <p class="text-lg leading-relaxed">
+                        It's a secure, owners-only portal where you can see real-time maintenance schedules, financial statements, 
+                        guest bookings, and direct communication logs—all from your phone or desktop.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: Final Call-to-Action -->
+    <section id="contact" class="py-20 md:py-32">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-playfair mb-6">Ready for Effortless Ownership?</h2>
+            <p class="text-xl md:text-2xl mb-10 text-warm-black">
+                Discover how Lumina can transform your property experience.
+            </p>
+            
+            <a href="#contact-form" class="cta-button inline-block px-12 py-5 rounded-sm text-lg mb-8">
+                Book Your Free Consultation
+            </a>
+            
+            <p class="text-base text-warm-black italic mt-8">
+                Your consultation is confidential and completely free of charge.
+            </p>
+            
+            <!-- Contact Form Placeholder -->
+            <div id="contact-form" class="mt-16 max-w-2xl mx-auto bg-white p-8 rounded-sm shadow-lg">
+                <h3 class="text-2xl font-playfair mb-6 text-soft-charcoal">Schedule Your Consultation</h3>
+                <form class="space-y-4 text-left">
+                    <div>
+                        <label class="block text-sm font-montserrat font-semibold mb-2 text-soft-charcoal" for="name">Name *</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-antique-gold">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-montserrat font-semibold mb-2 text-soft-charcoal" for="email">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-antique-gold">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-montserrat font-semibold mb-2 text-soft-charcoal" for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-antique-gold">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-montserrat font-semibold mb-2 text-soft-charcoal" for="property">Property Location</label>
+                        <input type="text" id="property" name="property" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-antique-gold">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-montserrat font-semibold mb-2 text-soft-charcoal" for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-antique-gold"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button w-full py-4 rounded-sm text-base">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-section py-12">
+        <div class="container mx-auto max-w-6xl text-center">
+            <div class="mb-6">
+                <h3 class="text-2xl font-playfair mb-2">Lumina Property Management</h3>
+                <p class="text-sm uppercase tracking-widest">Where Transparency Meets Luxury</p>
+            </div>
+            
+            <div class="text-sm space-y-2">
+                <p>© 2024 Lumina Property Management. All rights reserved.</p>
+                <p class="text-antique-gold">
+                    <a href="#" class="hover:underline">Privacy Policy</a> | 
+                    <a href="#" class="hover:underline">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
