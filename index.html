@@ -143,9 +143,62 @@
                 padding: 7rem 2rem;
             }
         }
+        
+        /* Header/Navigation Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(243, 240, 236, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .logo-img {
+                height: 80px;
+            }
+        }
+        
+        /* Adjust first section padding for fixed header */
+        body {
+            padding-top: 80px;
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                padding-top: 100px;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container mx-auto max-w-7xl px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <img src="assets/images/lumina-logo.png" alt="Lumina Property Management" class="logo-img">
+                </a>
+                
+                <!-- CTA Button (Desktop) -->
+                <a href="#contact" class="hidden md:inline-block cta-button px-8 py-3 rounded-sm text-sm">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
 
     <!-- SECTION 1: Hero Section -->
     <section class="min-h-screen flex items-center justify-center relative" style="background: linear-gradient(rgba(42, 42, 42, 0.4), rgba(42, 42, 42, 0.4)), url('https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=2074&auto=format&fit=crop') center/cover no-repeat;">
