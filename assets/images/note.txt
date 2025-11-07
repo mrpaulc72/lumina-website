@@ -1,0 +1,7 @@
+Please save the Lumina logo (the gold logo with starburst you provided) as:
+lumina-logo.png
+
+Then commit and push:
+git add assets/images/lumina-logo.png
+git commit -m "Add Lumina logo"
+git push
