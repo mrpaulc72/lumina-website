@@ -417,11 +417,11 @@
 
             <p>Stop guessing and start gaining clarity. Take advantage of Lumina's complimentary Forensic Property Audit today. It's a risk-free way to identify potential savings and ensure your luxury assets are performing optimally.</p>
 
-            <a href="https://mrpaulc72.github.io/lumina-website/#contact" class="cta-button">
+            <button id="claim-audit-btn" class="cta-button" style="border: none; cursor: pointer;">
                 Claim Your Complimentary Audit Now
-            </a>
+            </button>
 
-            <p class="url-text">LuminaPM.com/Audit</p>
+            <p class="url-text">luminapropertymanagement.com/Audit</p>
 
             <div class="founder-note">
                 <p><strong>Prepared by Kristen Shafer, Founder of Lumina Property Management.</strong></p>
@@ -434,12 +434,422 @@
                 </div>
                 <p><strong>Phone:</strong> (555) 123-4567</p>
                 <p><strong>Email:</strong> shaferk18@gmail.com</p>
-                <p><strong>Website:</strong> LuminaPM.com</p>
+                <p><strong>Website:</strong> luminapropertymanagement.com</p>
             </div>
         </div>
 
         <div class="page-number">Page 3 of 3</div>
     </div>
+
+    <!-- Modal Overlay -->
+    <div id="audit-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Schedule Your Complimentary Audit</h3>
+                <button class="modal-close" id="close-modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-description">Please provide your details below. We'll redirect you to our calendar to book your consultation.</p>
+                
+                <form id="audit-form">
+                    <div class="form-group">
+                        <label for="lead-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="lead-name" name="name" required placeholder="John Smith">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lead-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="lead-email" name="email" required placeholder="john@example.com">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lead-property">Property Address (Optional)</label>
+                        <input type="text" id="lead-property" name="property" placeholder="123 Ocean Drive, Miami, FL">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lead-details">Key Property Details (Optional)</label>
+                        <textarea id="lead-details" name="details" rows="3" placeholder="e.g., 4-bedroom oceanfront villa, currently managed by XYZ Company"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="modal-submit-btn">
+                        Continue to Booking
+                    </button>
+                </form>
+                
+                <div id="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <p>Thank you! Redirecting you to our booking calendar...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-container {
+            background: var(--warm-parchment);
+            max-width: 550px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .modal-header {
+            padding: 30px 30px 20px 30px;
+            border-bottom: 1px solid rgba(186, 156, 123, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--warm-black);
+            margin: 0;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: var(--warm-black);
+            cursor: pointer;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+        
+        .modal-close:hover {
+            color: var(--antique-gold);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .modal-description {
+            font-size: 14px;
+            color: var(--warm-black);
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--warm-black);
+            margin-bottom: 8px;
+        }
+        
+        .required {
+            color: #c44;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(186, 156, 123, 0.3);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: var(--warm-black);
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--antique-gold);
+            box-shadow: 0 0 0 3px rgba(186, 156, 123, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .error-message {
+            display: block;
+            color: #c44;
+            font-size: 12px;
+            margin-top: 5px;
+            min-height: 18px;
+        }
+        
+        .modal-submit-btn {
+            width: 100%;
+            background: var(--antique-gold);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .modal-submit-btn:hover {
+            background: #a38a6b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(186, 156, 123, 0.4);
+        }
+        
+        .modal-submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        #success-message {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--antique-gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 20px auto;
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        #success-message p {
+            font-size: 16px;
+            color: var(--warm-black);
+            margin: 0;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .modal-container {
+                margin: 20px;
+            }
+            
+            .modal-header,
+            .modal-body {
+                padding: 20px;
+            }
+            
+            .modal-header h3 {
+                font-size: 20px;
+            }
+        }
+        
+        /* Print - Hide Modal */
+        @media print {
+            .modal-overlay {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <!-- Modal JavaScript -->
+    <script>
+        // Configuration
+        const CALENDLY_URL = 'https://calendly.com/lumina-pm/30min';
+        const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'; // Replace with actual endpoint
+        
+        // DOM Elements
+        const modal = document.getElementById('audit-modal');
+        const claimBtn = document.getElementById('claim-audit-btn');
+        const closeBtn = document.getElementById('close-modal');
+        const form = document.getElementById('audit-form');
+        const successMessage = document.getElementById('success-message');
+        
+        // Open Modal
+        function openModal() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+        
+        // Close Modal
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Reset form
+            form.reset();
+            form.style.display = 'block';
+            successMessage.style.display = 'none';
+            clearErrors();
+        }
+        
+        // Clear Error Messages
+        function clearErrors() {
+            document.getElementById('name-error').textContent = '';
+            document.getElementById('email-error').textContent = '';
+        }
+        
+        // Validate Form
+        function validateForm(formData) {
+            let isValid = true;
+            clearErrors();
+            
+            // Validate Name
+            if (!formData.get('name') || formData.get('name').trim() === '') {
+                document.getElementById('name-error').textContent = 'Please enter your name';
+                isValid = false;
+            }
+            
+            // Validate Email
+            const email = formData.get('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!email || email.trim() === '') {
+                document.getElementById('email-error').textContent = 'Please enter your email';
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // Submit Form
+        async function submitForm(formData) {
+            try {
+                // Log to console (for testing)
+                console.log('Form Data Submitted:', {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    property: formData.get('property'),
+                    details: formData.get('details')
+                });
+                
+                // Optional: Send to endpoint
+                // Uncomment when you have a real endpoint
+                /*
+                const response = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        property: formData.get('property'),
+                        details: formData.get('details'),
+                        source: 'Forensic Audit Lead Magnet'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
+                */
+                
+                // Show success message
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Redirect to Calendly after 2 seconds
+                setTimeout(() => {
+                    window.location.href = CALENDLY_URL;
+                }, 2000);
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting your information. Please try again or contact us directly at shaferk18@gmail.com');
+            }
+        }
+        
+        // Event Listeners
+        claimBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+        
+        // Form Submit Handler
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            // Validate
+            if (validateForm(formData)) {
+                submitForm(formData);
+            }
+        });
+    </script>
 
 </body>
 </html>
